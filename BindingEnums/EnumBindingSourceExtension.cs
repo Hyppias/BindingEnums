@@ -5,7 +5,7 @@ namespace BindingEnums
 {
     public class EnumBindingSourceExtension : MarkupExtension
     {
-        private Type _enumType;
+        private Type _enumType = typeof(Status);
         public Type EnumType
         {
             get { return this._enumType; }

@@ -15,19 +15,22 @@ namespace BindingEnums
         {
             InitializeComponent();
             DataContext=this;
-            Bad = Status.Best;
+            // this causes the initial Quality value to be
+            // displayed in the ComboBox on startup, because
+            // SelectedItem in bound to the Quality property
+            Quality = Status.Best;
         }        
 
-        private Status bad;
+        private Status quality;
 
         
-        public Status Bad
+        public Status Quality
         {
-            get { return bad; }
+            get { return quality; }
             set 
             { 
-                bad = value;
-                OnPropertyChanged(nameof(Bad));
+                quality = value;
+                OnPropertyChanged(nameof(Quality));
             }
         }
         protected void OnPropertyChanged( string propertyName = null)

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BindingEnums"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="300">
+        Title="MainWindow" Height="150" Width="200">
     <!--<Window.Resources>
         <local:EnumDescriptionTypeConverter x:Key="EnumDescr"/>
     </Window.Resources>-->
@@ -20,15 +20,15 @@
             HorizontalAlignment="Center"
             VerticalAlignment="Center"
             Width="100"
-            SelectedItem="{Binding Bad, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+            SelectedItem="{Binding Quality, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
             ItemsSource="{Binding Source={local:EnumBindingSource EnumType={x:Type local:Status}}}"/>
         <Label
             Grid.Row="1"
             Height="30"
-            Content="{Binding Bad, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/> 
+            Content="{Binding Quality, Mode=OneWay}"/> 
         <TextBox
             Grid.Row="2"
             Height="30"
-            Text="{Binding Bad, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/> 
+            Text="{Binding Quality, Mode=TwoWay}"/> 
     </Grid>
 </Window>
